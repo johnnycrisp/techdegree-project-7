@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: "Open Sans", sans-serif;
 }
@@ -98,7 +102,7 @@ h2 {
 
 .section-break {
   grid-area: section-break;
-  background-color: rgb(204, 201, 201);
+  background-color: rgb(251, 251, 251);
   height: 100%;
   width: 100%;
   border-left: 1px gray solid;
@@ -127,6 +131,92 @@ h2 {
 .traffic {
     grid-area: traffic;
 }
+
+.traffic-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.traffic-titles h2 {
+  margin-bottom: 0;
+}
+
+.traffic-segments {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 12px;
+}
+
+.selected-segment {
+  background-color: rgb(110, 187, 39);
+  color: white;
+  border-radius: 2em;
+}
+
+.traffic-segments li {
+  margin-right: 8px;
+  font-weight: 200;
+  padding: 10px 10px;
+  margin-top: 8px;
+ 
+
+}
+
+#fb, #ig, #twtr {
+  height: 24px;
+  width: 24px;
+  fill: white;   
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom:0;
+  left:0;
+  margin: auto;
+}
+
+.facebook, .instagram, .twitter  {
+  display: flex;
+  background-color: rgb(251, 251, 251);
+  justify-content: flex-start;
+  margin: 12px;
+  padding: 12px 12px; 
+  align-items: center;
+  border: 1px rgb(213, 209, 209) solid;
+  border-radius: 6px;
+}
+
+#fb-wrapper, #ig-wrapper, #twtr-wrapper {
+    position: relative;
+
+  background: rgba(98, 113, 229, 0.791);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.fb-numbers {
+  display:flex;
+  flex-direction: column;
+
+}
+
+
+.social-numbers p {
+  font-size: 30px;
+  padding: 4px;
+  margin: 0;
+  color: grey;
+
+}
+
+.social-numbers h3 {
+  color: rgba(98, 113, 229);
+  font-weight: 300;
+}
+
+
 
 .mobile-users {
     grid-area: mobile-users;
