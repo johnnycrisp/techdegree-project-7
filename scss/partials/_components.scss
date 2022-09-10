@@ -1,0 +1,122 @@
+//buttons
+
+.btn-send {
+    @include button-primary;
+    width: 100%;
+    margin-top: 12px;
+}
+
+.btn-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    border-radius: 19px;
+    margin: 12px;
+    height: 44px;
+    min-width: 100px;
+    background-color: $color-primary;
+    color: white;
+
+}
+
+.btn-switch-btn {
+    background-color: transparent;
+    color: white;
+    border: 0;
+    font-size: 19px;
+    font-weight: 100;
+}
+
+.toggle-circle {
+    background-color: white;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: rgb(213, 209, 209) 3px solid;
+}
+
+.btn-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn-cancel {
+    @include button-cancel;
+    margin: 12px 0px 12px 12px;
+    width: 50%;
+}
+
+.btn-save {
+   
+    @include button-save;
+    margin: 12px 12px 12px 0;
+    width: 50%;
+    
+
+}
+
+
+//social svgs section
+
+#fb,
+#ig,
+#twtr {
+    height: 24px;
+    width: 24px;
+    fill: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.facebook,
+.instagram,
+.twitter {
+    display: flex;
+    background-color: $color-background;
+    justify-content: flex-start;
+    margin: 12px;
+    padding: 12px 12px;
+    align-items: center;
+    border: $border;
+    border-radius: 6px;
+}
+
+#fb-wrapper,
+#ig-wrapper,
+#twtr-wrapper {
+    position: relative;
+    background: $color-primary;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.fb-numbers {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.social-numbers {
+
+    p {
+        font-size: 30px;
+        padding: 4px;
+        margin: 0;
+        color: rgb(132, 130, 130);
+    }
+
+    h3 {
+        color: $color-primary;
+        font-weight: 300;
+    }
+}

@@ -1,40 +1,194 @@
-* {
-  box-sizing: border-box;
+.btn-send {
+  background-color: rgba(98, 113, 229, 0.791);
+  color: white;
+  border-radius: 4px;
+  height: 44px;
+  padding: 6px;
+  border: 0;
+  width: 100%;
+  margin-top: 12px;
 }
 
-html, body {
-  font-family: "Open Sans", sans-serif;
-  overflow-x: hidden;
-  max-width: 100vw;
-  margin: 0;
-  padding: 0;
+.btn-switch {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px;
+  border-radius: 19px;
+  margin: 12px;
+  height: 44px;
+  min-width: 100px;
+  background-color: rgba(98, 113, 229, 0.791);
+  color: white;
 }
 
-p {
-  font-weight: 200;
-  padding: 0 12px;
-  font-size: 0.9rem;
-}
-
-sup {
-  font-size: 8px;
-}
-
-h1 {
-  margin: 0 12px;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-}
-
-h3 {
-  margin: 0 0.5em;
-  font-size: 14px;
+.btn-switch-btn {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  font-size: 19px;
   font-weight: 100;
 }
 
+.toggle-circle {
+  background-color: white;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: rgb(213, 209, 209) 3px solid;
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-cancel {
+  padding: 6px;
+  border-radius: 4px;
+  height: 44px;
+  background-color: rgba(113, 113, 115, 0.791);
+  color: white;
+  border: 0;
+  margin: 12px 0px 12px 12px;
+  width: 50%;
+}
+
+.btn-save {
+  padding: 6px;
+  border-radius: 4px;
+  height: 44px;
+  background-color: rgba(98, 113, 229, 0.791);
+  color: white;
+  border: 0;
+  margin: 12px 12px 12px 0;
+  width: 50%;
+}
+
+#fb,
+#ig,
+#twtr {
+  height: 24px;
+  width: 24px;
+  fill: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.facebook,
+.instagram,
+.twitter {
+  display: flex;
+  background-color: rgb(251, 251, 251);
+  justify-content: flex-start;
+  margin: 12px;
+  padding: 12px 12px;
+  align-items: center;
+  border: 1px rgb(213, 209, 209) solid;
+  border-radius: 6px;
+}
+
+#fb-wrapper,
+#ig-wrapper,
+#twtr-wrapper {
+  position: relative;
+  background: rgba(98, 113, 229, 0.791);
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.fb-numbers {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-numbers p {
+  font-size: 30px;
+  padding: 4px;
+  margin: 0;
+  color: rgb(132, 130, 130);
+}
+.social-numbers h3 {
+  color: rgba(98, 113, 229, 0.791);
+  font-weight: 300;
+}
+
+.traffic {
+  grid-area: traffic;
+  border-bottom: 1px rgb(213, 209, 209) solid;
+}
+
+.traffic-titles {
+  display: flex;
+  flex-direction: column;
+}
+.traffic-titles h2 {
+  margin-bottom: 0;
+}
+
+.traffic-segments {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-left: 12px;
+}
+.traffic-segments li {
+  margin-right: 8px;
+  font-weight: 200;
+  padding: 10px 10px;
+  margin-top: 8px;
+}
+
+.selected-segment {
+  background-color: rgb(110, 187, 39);
+  color: white;
+  border-radius: 2em;
+}
+
 header {
-    grid-area: header;
+  grid-area: header;
+}
+
+.mobile-users {
+  grid-area: mobile-users;
+  border-bottom: 1px rgb(213, 209, 209) solid;
+}
+
+.daily-traffic {
+  grid-area: daily-traffic;
+  border-bottom: 1px rgb(213, 209, 209) solid;
+}
+
+.social-stats {
+  grid-area: social-stats;
+  border-bottom: 1px rgb(213, 209, 209) solid;
+}
+
+.new-members {
+  grid-area: new-members;
+  border-bottom: 1px rgb(213, 209, 209) solid;
+}
+
+.recent-activity {
+  grid-area: recent-activity;
+  border-bottom: 1px rgb(213, 209, 209) solid;
+}
+
+.message-user {
+  grid-area: message-user;
+  border-bottom: 1px rgb(213, 209, 209) solid;
+}
+
+.settings-section {
+  grid-area: settings;
 }
 
 .top-banner {
@@ -51,6 +205,12 @@ header {
   height: 25px;
   width: 25px;
   margin: 0;
+  scale: 1;
+  transition: transform 0.2s ease-out;
+  cursor: pointer;
+}
+.notification-bell:hover {
+  transform: scale(1.2);
 }
 
 .student-profile {
@@ -80,13 +240,393 @@ header {
   color: white;
   width: 100%;
 }
-
 .nav-container svg {
-    height: 40px;
-    margin: 5px;
-    padding: 5px;
-    fill: white;
+  height: 40px;
+  margin: 5px;
+  padding: 5px;
+  fill: white;
+}
 
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Open Sans", sans-serif;
+  max-width: 100vw;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-weight: 200;
+  padding: 0 12px;
+  font-size: 0.9rem;
+}
+
+sup {
+  font-size: 8px;
+}
+
+h1 {
+  margin: 0 12px;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+h3 {
+  margin: 0 0.5em;
+  font-size: 14px;
+  font-weight: 200;
 }
 
 .section-container {
@@ -101,6 +641,7 @@ h2 {
   margin-left: 12px;
   margin-right: 12px;
   font-weight: 300;
+  font-style: bold;
   font-size: 16px;
 }
 
@@ -109,8 +650,8 @@ h2 {
   background-color: rgb(251, 251, 251);
   height: 100%;
   width: 100%;
-  border-left: 1px rgb(213, 209, 209) solid;;
-  border-bottom: 1px rgb(213, 209, 209) solid;;
+  border-left: 1px rgb(213, 209, 209) solid;
+  border-bottom: 1px rgb(213, 209, 209) solid;
 }
 
 .notification-circle {
@@ -123,143 +664,13 @@ h2 {
 
 .alert-popup {
   grid-area: alert-popup;
-  background-color:rgba(98, 113, 229, 0.791);
+  background-color: rgba(98, 113, 229, 0.791);
   color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 12px 12px;
   border-radius: 4px;
-}
-
-.traffic {
-    grid-area: traffic;
-}
-
-.traffic-titles {
-  display: flex;
-  flex-direction: column;
-}
-
-.traffic-titles h2 {
-  margin-bottom: 0;
-}
-
-.traffic-segments {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  padding-left: 12px;
-}
-
-.selected-segment {
-  background-color: rgb(110, 187, 39);
-  color: white;
-  border-radius: 2em;
-}
-
-.traffic-segments li {
-  margin-right: 8px;
-  font-weight: 200;
-  padding: 10px 10px;
-  margin-top: 8px;
- 
-
-}
-
-#fb, #ig, #twtr {
-  height: 24px;
-  width: 24px;
-  fill: white;   
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom:0;
-  left:0;
-  margin: auto;
-}
-
-.facebook, .instagram, .twitter  {
-  display: flex;
-  background-color: rgb(251, 251, 251);
-  justify-content: flex-start;
-  margin: 12px;
-  padding: 12px 12px; 
-  align-items: center;
-  border: 1px rgb(213, 209, 209) solid;
-  border-radius: 6px;
-}
-
-#fb-wrapper, #ig-wrapper, #twtr-wrapper {
-    position: relative;
-
-  background: rgba(98, 113, 229, 0.791);
-  height: 50px;
-  width: 50px;
-  border-radius: 50%;
-  margin-right: 12px;
-}
-
-.fb-numbers {
-  display:flex;
-  flex-direction: column;
-
-}
-
-
-.social-numbers p {
-  font-size: 30px;
-  padding: 4px;
-  margin: 0;
-  color: grey;
-
-}
-
-.social-numbers h3 {
-  color: rgba(98, 113, 229);
-  font-weight: 300;
-}
-
-
-
-.mobile-users {
-    grid-area: mobile-users;
-    border-bottom: 1px rgb(213, 209, 209) solid;
-
-}
-
-.daily-traffic {
-    grid-area: daily-traffic;
-    border-bottom: 1px rgb(213, 209, 209) solid;
-
-}
-
-.social-stats {
-    grid-area: social-stats;
-    border-bottom: 1px rgb(213, 209, 209) solid;
-
-}
-
-.new-members {
-    grid-area: new-members;
-    border-bottom: 1px rgb(213, 209, 209) solid;
-
-}
-
-.recent-activity {
-    grid-area: recent-activity;
-    border-bottom: 1px rgb(213, 209, 209) solid;
-
-}
-
-.message-user {
-        grid-area: message-user;
-        border-bottom: 1px rgb(213, 209, 209) solid;
-}
-
-.settings-section {
-        grid-area: settings;
-      
 }
 
 .search-wrapper {
@@ -275,22 +686,14 @@ h2 {
   justify-content: center;
   margin: 0 12px;
   padding: 16px 0;
-
 }
-
 .new-member:last-child {
   border-bottom: none;
 }
-
-.email {
-  color:rgba(98, 113, 229);
-}
-
 .new-member p {
   margin: 0;
   padding: 1px;
 }
-
 .new-member img {
   margin-bottom: 6px;
   width: 70px;
@@ -298,6 +701,9 @@ h2 {
   border-radius: 50%;
 }
 
+.email {
+  color: rgba(98, 113, 229, 0.791);
+}
 
 .user-search {
   margin-bottom: 12px;
@@ -318,55 +724,12 @@ h2 {
   background-color: rgb(251, 251, 251);
 }
 
-.btn-send {
-  background-color: rgba(98, 113, 229, 0.791);
-  color: white;
-  border-radius: 4px;
-  width: 100%;
-  height: 44px;
-  margin-top: 12px;
-  padding: 9px;
-  border:0;
-
-}
-
-.btn-switch {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 6px;
-  border-radius: 19px;
-  margin: 12px;
-  height: 44px;
-  min-width: 100px;
-  background-color: rgba(98, 113, 229, 0.791);
-  color: white;
-
-}
-
-.btn-switch-btn {
-  background-color: transparent;
-  color: white;
-  border: 0;
-  font-size: 19px;
-  font-weight: 100;
-}
-
-.toggle-circle {
-  background-color: white;
-  height:35px;
-  width: 35px;
-  border-radius: 50%;
-  border:rgb(213, 209, 209) 3px solid;
-}
-
 .settings-change-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-left: 12px;
 }
-
 .settings-change-container p {
   font-size: 16px;
 }
@@ -381,165 +744,103 @@ h2 {
   height: 44px;
   width: 100%;
   padding: 9px;
-  color: rgb(213, 209, 209);
   background-color: rgb(251, 251, 251);
-}
-
-.btn-container {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.btn-cancel {
-  padding: 6px;
-  border-radius: 4px;
-  margin: 12px 0px 12px 12px;
-  height: 44px;
-  width: 50%;
-  background-color: rgba(113, 113, 115, 0.791);
-  color: white;
-  border: 0;
-}
-
-.btn-save {
-  padding: 6px;
-  border-radius: 4px;
-  margin: 12px 12px 12px 0;
-  height: 44px;
-  width: 50%;
-  background-color: rgba(98, 113, 229, 0.791);
-  color: white;
-  border: 0;
-
+  color: rgba(113, 113, 115, 0.791);
 }
 
 .arrow {
   display: none;
-  color:rgba(9, 20, 104, 0.791);
+  color: rgba(9, 20, 104, 0.791);
   font-size: 22px;
 }
 
 /* 
 //Media Queries */
-
-
-@media screen and (min-width:768px) {
-
-.grid-container {
-        display: grid;
-        grid-template-columns: 80px 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "header header header"
-        "nav-container section-container section-container "
-        "nav-container alert-popup alert-popup"
-        "nav-container traffic traffic "
-        "nav-container daily-traffic mobile-users"
-        "nav-container social-stats social-stats"
-        "nav-container new-members new-members"
-        "nav-container recent-activity recent-activity"
-        "nav-container message-user message-user"
-        "nav-container settings settings"
-        ;
-    }
-
-    .nav-container {
-        height: 100%;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-     .nav-container svg {
-        height: 40px;
-        margin-top: 16px;
-    }
-
-    .new-member {
-
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .member-info-container {
-      display: flex;
-      align-items: center;
-      
-    }
-
-    .member-info {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: 12px;
-
-    }
-
-    .arrow {
-      display: block;
-    }
-
-   
+@media screen and (min-width: 768px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "nav-container section-container section-container " "nav-container alert-popup alert-popup" "nav-container traffic traffic " "nav-container daily-traffic mobile-users" "nav-container social-stats social-stats" "nav-container new-members new-members" "nav-container recent-activity recent-activity" "nav-container message-user message-user" "nav-container settings settings";
+  }
+  .nav-container {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nav-container svg {
+    height: 40px;
+    margin-top: 16px;
+  }
+  .new-member {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .member-info-container {
+    display: flex;
+    align-items: center;
+  }
+  .member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 12px;
+  }
+  .arrow {
+    display: block;
+  }
+  .settings-change-container {
+    justify-content: flex-start;
+  }
+  .settings-change-container p {
+    min-width: 200px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "header header header" "nav-container section-container section-container " "nav-container alert-popup alert-popup" "nav-container traffic traffic " "nav-container daily-traffic mobile-users" "nav-container social-stats social-stats" "nav-container new-members recent-activity" "nav-container message-user settings";
+  }
+  .nav-container {
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .nav-container svg {
+    height: 40px;
+    margin-top: 16px;
+  }
+  .new-members,
+.message-user {
+    border-right: 1px rgb(213, 209, 209) solid;
+  }
+  .new-member {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .member-info-container {
+    display: flex;
+    align-items: center;
+  }
+  .member-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 12px;
+  }
+  .arrow {
+    display: block;
+  }
+  .settings-change-container {
+    justify-content: flex-start;
+  }
+  .settings-change-container p {
+    min-width: 200px;
+  }
 }
 
-@media screen and (min-width:1024px) {
-
-.grid-container {
-        display: grid;
-        grid-template-columns: 80px 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "header header header"
-        "nav-container section-container section-container "
-        "nav-container alert-popup alert-popup"
-        "nav-container traffic traffic "
-        "nav-container daily-traffic mobile-users"
-        "nav-container social-stats social-stats"
-        "nav-container new-members recent-activity"
-        "nav-container message-user settings"
-        ;
-    }
-
-    .nav-container {
-        height: 100%;
-        flex-direction: column;
-        justify-content: flex-start;
-    }
-
-     .nav-container svg {
-        height: 40px;
-        margin-top: 16px;
-    }
-
-      .new-members, .message-user {
-
-      border-right: 1px rgb(213, 209, 209) solid;
-    }
-
-     .new-member {
-
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .member-info-container {
-      display: flex;
-      align-items: center;
-      
-    }
-
-    .member-info {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin-left: 12px;
-
-    }
-
-    .arrow {
-      display: block;
-    }
-}
+/*# sourceMappingURL=styles.css.map */

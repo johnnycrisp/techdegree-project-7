@@ -1,0 +1,133 @@
+// traffic section
+
+.traffic {
+    grid-area: traffic;
+    border-bottom: $border;
+}
+
+.traffic-titles {
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+        margin-bottom: 0;
+    }
+}
+
+.traffic-segments {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding-left: 12px;
+
+    li {
+        margin-right: 8px;
+        font-weight: 200;
+        padding: 10px 10px;
+        margin-top: 8px;
+    }
+}
+
+.selected-segment {
+    background-color: rgb(110, 187, 39);
+    color: white;
+    border-radius: 2em;
+}
+
+//other sections
+
+header {
+    grid-area: header;
+}
+
+.mobile-users {
+    @include container(mobile-users);
+}
+
+.daily-traffic {
+        @include container(daily-traffic);
+}
+
+.social-stats {
+        @include container(social-stats);
+}
+
+.new-members {
+        @include container(new-members);
+}
+
+.recent-activity {
+        @include container(recent-activity);
+}
+
+.message-user {
+        @include container(message-user);
+}
+
+.settings-section {
+    grid-area: settings;
+}
+
+
+//top banner
+
+.top-banner {
+    height: 80px;
+    background-color: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    min-width: 100%;
+}
+
+.notification-bell {
+    height: 25px;
+    width: 25px;
+    margin: 0;
+    scale: 1;
+    transition: transform .2s ease-out;
+    cursor: pointer;
+
+    &:hover {
+    transform: scale(1.2);
+    }
+}
+
+.student-profile {
+    border-radius: 50%;
+    height: 45px;
+}
+
+.banner-container {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.line-break {
+    border-right: 1px solid white;
+    height: 40px;
+    margin: 0 12px;
+}
+
+//nav bar
+
+.nav-container {
+    grid-area: nav-container;
+    height: 60px;
+    background-color: $color-secondary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    width: 100%;
+
+    svg {
+        height: 40px;
+        margin: 5px;
+        padding: 5px;
+        fill: white;
+
+    }
+}

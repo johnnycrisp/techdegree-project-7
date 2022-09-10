@@ -1,0 +1,32 @@
+@mixin container($areaname) {
+    grid-area: $areaname;
+    border-bottom: $border;
+}
+
+@mixin button-primary {
+        background-color: $color-primary;
+        color: white;
+        border-radius: 4px;
+        height: 44px;
+        padding: 6px;
+        border: 0;
+}
+
+@mixin button-cancel {
+        padding: 6px;
+        border-radius: 4px;
+        height: 44px;
+        background-color: rgba(113, 113, 115, 0.791);
+        color: white;
+        border: 0;
+}
+
+@mixin button-save {
+    padding: 6px;
+    border-radius: 4px;
+    height: 44px;
+    background-color: $color-primary;
+    color: white;
+    border: 0;
+}
+
