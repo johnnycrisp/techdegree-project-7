@@ -64,45 +64,24 @@
 #fb,
 #ig,
 #twtr {
-    height: 24px;
-    width: 24px;
-    fill: white;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
+    @include social-icon;
 }
 
 .facebook,
 .instagram,
 .twitter {
-    display: flex;
-    background-color: $color-background;
-    justify-content: flex-start;
-    margin: 12px;
-    padding: 12px 12px;
-    align-items: center;
-    border: $border;
-    border-radius: 6px;
+    @include social-card;
 }
 
 #fb-wrapper,
 #ig-wrapper,
 #twtr-wrapper {
-    position: relative;
-    background: $color-primary;
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    margin-right: 12px;
+    @include social-wrapper;
 }
 
 .fb-numbers {
     display: flex;
     flex-direction: column;
-
 }
 
 

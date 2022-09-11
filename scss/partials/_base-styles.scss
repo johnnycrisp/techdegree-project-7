@@ -173,6 +173,22 @@ h2 {
     font-size: 22px;
 }
 
+#traffic-chart {
+    max-height: 400px;
+    width: 100%;
+    height: 100%;
+    margin: 12px;
+}
+
+#mobile-chart,
+#daily-chart {
+
+    max-height: 200px;
+    width: 100%;
+    height: 100%;
+    margin: 12px;
+}
+
 /* 
 //Media Queries */
 
@@ -243,8 +259,37 @@ h2 {
                 }
     }
 
+                 .traffic-titles {
+                     flex-direction: row;
+                     justify-content: space-between;
+                     align-items: center;
+                 }
+        
+                 .traffic-segments {
+                     justify-content: flex-end;
+                 }
+
+                .social-stats-container {
+                                     display: flex;
+                                     justify-content: space-around;
+                                     align-items: center;
+                 }
+                
+                 .twitter,
+                 .facebook,
+                                 .instagram {
+                
+                                     width: 33%;
+                                 }
+                
+                                 .instagram {
+                                     margin-left: 0;
+                                     margin-right: 0;
+                                 }
 
 }
+
+
 
 @media screen and (min-width:1024px) {
 
@@ -314,4 +359,32 @@ h2 {
             min-width: 200px;
         }
     }
+
+         .traffic-titles {
+             flex-direction: row;
+             justify-content: space-between;
+             align-items: center;
+         }
+
+         .traffic-segments {
+            justify-content: flex-end;
+         }
+
+                 .social-stats-container {
+                     width: 100%; 
+                     display: flex;
+                     justify-content: space-around;
+                     align-items: center;
+                 }
+
+                 .twitter, .facebook, .instagram {
+                    
+                    width:33%;
+                 }
+
+                 .instagram {
+                    margin-left:0;
+                    margin-right: 0;
+                 }
 }
+

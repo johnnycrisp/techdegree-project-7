@@ -1,8 +1,7 @@
 // traffic section
 
 .traffic {
-    grid-area: traffic;
-    border-bottom: $border;
+    @include container(traffic);
 }
 
 .traffic-titles {
@@ -29,7 +28,7 @@
 }
 
 .selected-segment {
-    background-color: rgb(110, 187, 39);
+    background-color: $green;
     color: white;
     border-radius: 2em;
 }
