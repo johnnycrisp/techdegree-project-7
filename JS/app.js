@@ -1,3 +1,29 @@
+//Alert
+
+const removeButton = document.getElementById('remove-btn');
+
+removeButton.addEventListener('click', (e)=>{
+    e.target.parentNode.remove();
+});
+
+// Send button
+
+const sendButton = document.querySelector('.btn-send');
+const userSearch = document.querySelector('.user-search');
+const userMessage = document.querySelector('.user-message');
+
+sendButton.addEventListener('click', ()=>{
+
+    if(userSearch.value !== '' && userMessage.value !== ''){
+    alert('Your data has been sent.');userSearch.value = '';
+    userMessage.value = '';
+    } else {
+        alert('Missing information. Select a user and add a message.');
+    }
+});
+
+
+
 //Traffic line chart
 
 const trafficCanvas = document.getElementById('traffic-chart');
@@ -105,4 +131,40 @@ let mobileChart = new Chart(mobileCanvas, {
 type: 'doughnut',
 data: mobileData,
 options: mobileOptions
+});
+
+const switchButtonEmail = document.querySelector('.toggle-circle');
+
+const switchButtonProfile = document.querySelector('.toggle-circle-profile');
+
+const checkboxOn = document.querySelector('.on');
+
+const checkboxOnProfile = document.querySelector('.on-profile');
+
+const checkboxOff = document.querySelector('.off');
+
+const checkboxOffProfile = document.querySelector('.off-profile');
+
+checkboxOff.addEventListener('click', (e)=>{
+
+ switchButtonEmail.style.transform = 'translateX(0px)';
+   
+});
+
+checkboxOn.addEventListener('click', (e)=>{
+
+    switchButtonEmail.style.transform = 'translateX(-57px)';
+   
+});
+
+checkboxOnProfile.addEventListener('click', (e)=>{
+
+    switchButtonProfile.style.transform = 'translateX(-57px)';
+   
+});
+
+checkboxOffProfile.addEventListener('click', (e)=>{
+
+    switchButtonProfile.style.transform = 'translateX(0px)';
+   
 });

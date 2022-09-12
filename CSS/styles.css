@@ -9,11 +9,36 @@
   margin-top: 12px;
 }
 
+#remove-btn {
+  padding: 0;
+  font-size: 1em;
+  margin: 12px;
+  transition: transform 0.1s ease-out;
+  cursor: pointer;
+}
+#remove-btn:hover {
+  transform: scale(1.1);
+}
+
 .btn-switch {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
   padding: 6px;
+  border-radius: 19px;
+  margin: 12px;
+  height: 44px;
+  min-width: 100px;
+  background-color: rgba(98, 113, 229, 0.791);
+  color: white;
+}
+.btn-switch input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.btn-switch-off {
+  position: relative;
+  padding: 6px 0px 6px 44px;
   border-radius: 19px;
   margin: 12px;
   height: 44px;
@@ -26,16 +51,66 @@
   background-color: transparent;
   color: white;
   border: 0;
+  padding-top: 4px;
+  font-size: 19px;
+  font-weight: 100;
+  border-radius: 50%;
+}
+
+.btn-switch input {
+  top: 6px;
+}
+
+.off, .off-profile {
+  z-index: 2;
+  position: absolute;
+  top: 11px;
+  left: 63px;
+  right: 3px;
+}
+
+.on, .on-profile {
+  z-index: 2;
+  position: absolute;
+  left: 8px;
+  top: 11px;
+}
+
+.btn-switch-btn-off {
+  background-color: transparent;
+  color: white;
+  border: 0;
+  padding-top: 4px;
   font-size: 19px;
   font-weight: 100;
 }
 
-.toggle-circle {
+.toggle-circle, .toggle-circle-profile {
   background-color: white;
+  position: absolute;
+  top: 4px;
+  left: 60px;
+  right: 2px;
+  bottom: 2px;
   height: 35px;
   width: 35px;
   border-radius: 50%;
   border: rgb(213, 209, 209) 3px solid;
+  transition: transform 0.4s ease-out;
+}
+
+.toggle-circle-off {
+  background-color: white;
+  position: absolute;
+  top: 4px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  border: rgb(213, 209, 209) 3px solid;
+  transform: translateX(-65px);
 }
 
 .btn-container {
@@ -820,9 +895,11 @@ h2 {
     justify-content: flex-end;
   }
   .social-stats-container {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 1;
   }
   .twitter,
 .facebook,
@@ -891,6 +968,7 @@ h2 {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin: 1;
   }
   .twitter, .facebook, .instagram {
     width: 33%;
