@@ -27,6 +27,7 @@ sendButton.addEventListener('click', ()=>{
 //Traffic line chart
 
 const trafficCanvas = document.getElementById('traffic-chart');
+const canvasWrapper = document.querySelector('.chart-wrapper');
 
 let trafficData = {
 labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
@@ -133,6 +134,8 @@ data: mobileData,
 options: mobileOptions
 });
 
+//Switch button
+
 const switchButtonEmail = document.querySelector('.toggle-circle');
 
 const switchButtonProfile = document.querySelector('.toggle-circle-profile');
@@ -167,4 +170,133 @@ checkboxOffProfile.addEventListener('click', (e)=>{
 
     switchButtonProfile.style.transform = 'translateX(0px)';
    
+});
+
+
+const trafficTitles = document.querySelector('.traffic-segments');
+const hourlySegment = document.querySelector('#hourly');
+const dailySegment = document.querySelector('#daily');
+const weeklySegment = document.querySelector('#weekly');
+const monthlySegment = document.querySelector('#monthly');
+
+trafficTitles.addEventListener('click', (e)=>{
+
+    const selectedSegment = document.querySelector('.selected-segment');
+
+    if(e.target === hourlySegment){
+
+    selectedSegment.classList.remove('selected-segment');
+    e.target.classList.add('selected-segment'); 
+
+        let trafficData = {
+            labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+            "4-10", "11-17", "18-24", "25-31"],
+            datasets: [{
+            data: [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500,
+            2500],
+            backgroundColor: 'rgba(116, 119, 191, .3)',
+            borderWidth: 1,
+            }]
+        };
+            
+        document.getElementById('traffic-chart').remove();
+        let newTrafficCanvas = document.createElement('canvas');
+        newTrafficCanvas.setAttribute('id','traffic-chart');
+
+        let trafficChart = new Chart(newTrafficCanvas, {
+        type: 'line',
+        data: trafficData,
+        options: trafficOptions
+        });
+        canvasWrapper.appendChild(newTrafficCanvas);    
+        
+
+} else if (e.target === dailySegment) { 
+
+        selectedSegment.classList.remove('selected-segment');
+        e.target.classList.add('selected-segment');
+
+        let trafficData = {
+            labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+            "4-10", "11-17", "18-24", "25-31"],
+            datasets: [{
+            data: [1000, 1250, 700, 1400, 1700, 1750, 1250, 1250, 1700, 1500,
+            2000],
+            backgroundColor: 'rgba(116, 119, 191, .3)',
+            borderWidth: 1,
+            }]
+        };
+            
+
+        document.getElementById('traffic-chart').remove();
+        let newTrafficCanvas = document.createElement('canvas');
+        newTrafficCanvas.setAttribute('id','traffic-chart');
+
+        let trafficChart = new Chart(newTrafficCanvas, {
+        type: 'line',
+        data: trafficData,
+        options: trafficOptions
+        });
+        canvasWrapper.appendChild(newTrafficCanvas); 
+
+
+    
+
+} else if (e.target === weeklySegment) { 
+
+        selectedSegment.classList.remove('selected-segment');
+        e.target.classList.add('selected-segment');
+
+      let trafficData = {
+            labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+            "4-10", "11-17", "18-24", "25-31"],
+            datasets: [{
+            data: [750, 1050, 800, 1200, 1500, 1250, 1850, 1850, 2050, 2400,
+            2100],
+            backgroundColor: 'rgba(116, 119, 191, .3)',
+            borderWidth: 1,
+            }]
+        };
+            
+
+        document.getElementById('traffic-chart').remove();
+        let newTrafficCanvas = document.createElement('canvas');
+        newTrafficCanvas.setAttribute('id','traffic-chart');
+
+        let trafficChart = new Chart(newTrafficCanvas, {
+        type: 'line',
+        data: trafficData,
+        options: trafficOptions
+        });
+        canvasWrapper.appendChild(newTrafficCanvas); 
+
+} else if (e.target === monthlySegment){
+
+        selectedSegment.classList.remove('selected-segment');
+        e.target.classList.add('selected-segment');
+
+let trafficData = {
+            labels: ["16-22", "23-29", "30-5", "6-12", "13-19", "20-26", "27-3",
+            "4-10", "11-17", "18-24", "25-31"],
+            datasets: [{
+            data: [250, 450, 1000, 700, 800, 1050, 1750, 1850, 2050, 2000,
+            2200],
+            backgroundColor: 'rgba(116, 119, 191, .3)',
+            borderWidth: 1,
+            }]
+        };
+            
+
+        document.getElementById('traffic-chart').remove();
+        let newTrafficCanvas = document.createElement('canvas');
+        newTrafficCanvas.setAttribute('id','traffic-chart');
+
+        let trafficChart = new Chart(newTrafficCanvas, {
+        type: 'line',
+        data: trafficData,
+        options: trafficOptions
+        });
+        canvasWrapper.appendChild(newTrafficCanvas); 
+
+} 
 });

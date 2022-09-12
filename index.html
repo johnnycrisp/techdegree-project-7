@@ -64,10 +64,10 @@
         <div class="traffic-titles">
             <h2>TRAFFIC</h2>
             <ul class="traffic-segments">
-                <li class="selected-segment">Hourly</li>
-                <li>Daily</li>
-                <li>Weekly</li>
-                <li>Monthly</li>
+                <li id="hourly" class="selected-segment">Hourly</li>
+                <li id="daily">Daily</li>
+                <li id="weekly">Weekly</li>
+                <li id="monthly">Monthly</li>
             </ul>
         </div>
         <div class="chart-wrapper"><canvas id="traffic-chart"></canvas></div>
@@ -257,13 +257,14 @@
 
         
         <div class="timezones-container">
+            <div class="timezones-select-wrapper">
             <select class="timezones">
                 <option value="placeholder" disabled selected>Select Timezone</option>
                 <option value="GMT">GMT</option>
                 <option value="GMT+1">GMT+1</option>
                 <option value="GMT+2">GMT+2</option>
                 <option value="GMT+3">GMT+3</option>
-            </select>
+            </select></div>
             <div class="btn-container">
                 <button type="submit" class="btn-save">SAVE</button>
                 <button type="submit" class="btn-cancel">CANCEL</button>
