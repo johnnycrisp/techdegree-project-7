@@ -876,6 +876,10 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 12px;
+    text-align: left;
+  }
+  .member-info p {
+    text-align: left;
   }
   .arrow {
     display: block;
@@ -945,6 +949,9 @@ h2 {
     flex-direction: column;
     align-items: flex-start;
     margin-left: 12px;
+  }
+  .member-info p {
+    text-align: left;
   }
   .arrow {
     display: block;
