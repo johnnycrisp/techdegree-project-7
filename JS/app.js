@@ -151,27 +151,59 @@ const checkboxOffProfile = document.querySelector('.off-profile');
 checkboxOff.addEventListener('click', (e)=>{
 
  switchButtonEmail.style.transform = 'translateX(0px)';
+ localStorage.setItem('email','checked-off');
    
 });
 
 checkboxOn.addEventListener('click', (e)=>{
 
     switchButtonEmail.style.transform = 'translateX(-57px)';
+    localStorage.setItem('email','checked-on');
+    
    
 });
 
 checkboxOnProfile.addEventListener('click', (e)=>{
 
+        let profileCheck = document.getElementById('btn-switch-profile');
+
     switchButtonProfile.style.transform = 'translateX(-57px)';
+    localStorage.setItem('profile','checked-on');
+    console.log(profileCheck.checked);
    
 });
 
 checkboxOffProfile.addEventListener('click', (e)=>{
 
+    let profileCheck = document.getElementById('btn-switch-profile');
+
     switchButtonProfile.style.transform = 'translateX(0px)';
-   
+    console.log(profileCheck.checked);
+    
+
 });
 
+//local storage settings
+
+const cancelButton = document.querySelector('.btn-cancel');
+const saveButton = document.querySelector('btn-save');
+
+// saveButton.addEventListener('click', ()=> {
+// if(){
+//     localStorage.setItem('profile','checked-off');
+// } else if (){
+//     localStorage.setItem('profile','checked-on')
+// } 
+// });
+
+cancelButton.addEventListener('click', ()=> {
+
+    localStorage.removeItem('email');
+    localStorage.removeItem('profile');
+});
+
+
+//traffic chart segments
 
 const trafficTitles = document.querySelector('.traffic-segments');
 const hourlySegment = document.querySelector('#hourly');
